@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                android:background="@color/colorWhite"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="?attr/actionBarSize">
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/app_icon"
+                        android:id="@+id/imgAppIcon"/>
+
+                    <travelapp.tamasya.view.customviews.textview.TextViewAvenirBook
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Tamsaya"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_centerInParent="true"
+                        android:textSize="38sp"
+                        android:id="@+id/txtAppName"
+                        android:layout_below="@id/imgAppIcon"/>
+                </LinearLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    android:title="Tamsaya"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?attr/actionBarSize"
+            app:layout_anchor="@+id/appbar"
+            app:layout_anchorGravity="bottom"
+            app:layout_collapseMode="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <travelapp.tamasya.view.customviews.button.ButtonAvenirBook
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_marginRight="8dp"
+                        android:text="Google+"
+                        android:textColor="@color/colorWhite"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_weight="1"/>
+
+                    <travelapp.tamasya.view.customviews.button.ButtonAvenirBook
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginLeft="8dp"
+                        android:text="Facebook"
+                        android:textColor="@color/colorWhite"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <travelapp.tamasya.view.customviews.edittext.EditTextAvenirBook
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Email"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColorHint="@color/colorPrimaryLight"
+                        android:inputType="textEmailAddress"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="4dp">
+
+                    <travelapp.tamasya.view.customviews.edittext.EditTextAvenirBook
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Password"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColorHint="@color/colorPrimaryLight"
+                        android:inputType="textPassword"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <travelapp.tamasya.view.customviews.textview.TextViewAvenirBook
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot password?"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:layout_margin="16dp"
+                    android:id="@+id/txtForgotPassword"
+                    android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <travelapp.tamasya.view.customviews.button.ButtonAvenirBook
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="LOGIN"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:onClick="doLogin"
+            android:layout_gravity="bottom"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>
+
+
+
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+    <!---->
+    <!--<android.support.v4.widget.NestedScrollView -->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--tools:context="travelapp.tamasya.view.startup.LoginActivity">-->
+        <!---->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_gravity="center">-->
+    <!---->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:gravity="center">-->
+                <!--<ImageView-->
+                    <!--android:layout_width="120dp"-->
+                    <!--android:layout_height="120dp"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:src="@drawable/app_icon"-->
+                    <!--android:id="@+id/imgAppIcon"/>-->
+    <!---->
+                <!--<travelapp.tamasya.view.customviews.textview.TextViewAvenirBook-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="Tamsaya"-->
+                    <!--android:textColor="@color/colorPrimary"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:textSize="38sp"-->
+                    <!--android:id="@+id/txtAppName"-->
+                    <!--android:layout_below="@id/imgAppIcon"/>-->
+            <!--</LinearLayout>-->
+            <!---->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginTop="32dp"-->
+                <!--android:layout_marginBottom="16dp"-->
+                <!--android:orientation="horizontal">-->
+                <!---->
+                <!--<travelapp.tamasya.view.customviews.button.ButtonAvenirBook-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/colorPrimaryDark"-->
+                    <!--android:layout_marginRight="8dp"-->
+                    <!--android:text="Google+"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:textAppearance="?android:textAppearanceMedium"-->
+                    <!--android:layout_weight="1"/>-->
+
+                <!--<travelapp.tamasya.view.customviews.button.ButtonAvenirBook-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/colorPrimary"-->
+                    <!--android:layout_marginLeft="8dp"-->
+                    <!--android:text="Facebook"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:textAppearance="?android:textAppearanceMedium"-->
+                    <!--android:layout_weight="1"/>-->
+                <!---->
+            <!--</LinearLayout>-->
+            <!---->
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginTop="16dp">-->
+                <!---->
+                <!--<travelapp.tamasya.view.customviews.edittext.EditTextAvenirBook-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent" -->
+                    <!--android:hint="Email"-->
+                    <!--android:textColor="@color/colorPrimary"-->
+                    <!--android:textAppearance="?android:textAppearanceMedium"-->
+                    <!--android:textColorHint="@color/colorPrimaryLight"-->
+                    <!--android:inputType="textEmailAddress"/>-->
+                <!---->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginTop="4dp">-->
+
+                <!--<travelapp.tamasya.view.customviews.edittext.EditTextAvenirBook-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:hint="Password"-->
+                    <!--android:textColor="@color/colorPrimary"-->
+                    <!--android:textAppearance="?android:textAppearanceMedium"-->
+                    <!--android:textColorHint="@color/colorPrimaryLight"-->
+                    <!--android:inputType="textPassword"/>-->
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--<travelapp.tamasya.view.customviews.textview.TextViewAvenirBook-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Forgot password?"-->
+                <!--android:gravity="center"-->
+                <!--android:textAppearance="?android:textAppearanceSmall"-->
+                <!--android:layout_margin="16dp"-->
+                <!--android:textColor="@color/colorPrimary"/>-->
+
+        <!--</LinearLayout>-->
+    <!---->
+    <!--</android.support.v4.widget.NestedScrollView>-->
+    <!---->
+    <!--<travelapp.tamasya.view.customviews.button.ButtonAvenirBook-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/colorPrimaryDark"-->
+        <!--android:text="LOGIN"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--android:textAppearance="?android:textAppearanceMedium"-->
+        <!--android:onClick="doLogin"/>-->
+<!--</LinearLayout>-->
