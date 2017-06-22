@@ -1,7 +1,8 @@
 package travelapp.tamasya;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -10,6 +11,6 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-//        T
+        Toast.makeText(this, "Tamasya App", Toast.LENGTH_LONG).show();
     }
 }
