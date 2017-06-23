@@ -24,7 +24,9 @@ import android.widget.ImageView;
 import android.widget.OverScroller;
 import android.widget.Scroller;
 
-public class TouchImageView extends android.support.v7.widget.AppCompatImageView
+import com.makeramen.roundedimageview.RoundedImageView;
+
+public class TouchImageView extends RoundedImageView
 {
     private static final String DEBUG = "DEBUG";
 
