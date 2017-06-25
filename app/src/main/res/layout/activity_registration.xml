@@ -176,32 +176,6 @@
 
                 </android.support.design.widget.TextInputLayout>
 
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="12dp">
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginRight="8dp"
-                        android:text="Traveller"
-                        android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="8dp"
-                        android:textAppearance="?android:textAppearanceMedium"
-                        android:text="Agent"
-                        android:textColor="@color/colorPrimary"/>
-
-                </RadioGroup>
-
             </LinearLayout>
 
         </android.support.v4.widget.NestedScrollView>
