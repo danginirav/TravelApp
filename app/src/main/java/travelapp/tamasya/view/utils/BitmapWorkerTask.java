@@ -1,4 +1,4 @@
-package meriyam.okhlee.util;
+package travelapp.tamasya.view.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

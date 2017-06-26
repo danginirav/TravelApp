@@ -1,10 +1,4 @@
 <resources>
     <string name="app_name">Tamasya</string>
     <string name="copyright_text">&#169; Tamasya Tour &amp; Travel</string>
-    <string name="title_activity_dashboard">Dashboard</string>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="action_settings">Settings</string>
 </resources>
