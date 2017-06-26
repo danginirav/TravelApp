@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_first_fragment"
+            android:title="MY BOOKING"
+            android:icon="@drawable/transaction"/>
+        <item
+            android:id="@+id/nav_second_fragment"
+            android:title="MY WALLET"
+            android:icon="@drawable/wallet"/>
+        <item
+            android:id="@+id/nav_third_fragment"
+            android:title="LANGUAGE"
+            android:icon="@drawable/change_lang"/>
+    </group>
+
+</menu>

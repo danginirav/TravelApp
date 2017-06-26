@@ -5,14 +5,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorWhite"
     tools:context="travelapp.tamasya.view.startup.VerifyActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <travelapp.tamasya.view.customviews.textview.TextViewAvenirBook
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:text="Verification"
+            android:textColor="@color/colorWhite"/>
+
+    </android.support.v7.widget.Toolbar>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
 
+        <travelapp.tamasya.view.customviews.textinputedittext.TextInputEditTextAvenirBook
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="ali.hassan@gmail.com"
+            android:enabled="false"
+            android:layout_weight="1"/>
 
+        <travelapp.tamasya.view.customviews.button.ButtonAvenirBook
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="VERIFIED"
+            android:background="@color/colorGreen"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="4dp"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp">
+
+        <travelapp.tamasya.view.customviews.textinputedittext.TextInputEditTextAvenirBook
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="+62246578912"
+            android:enabled="false"
+            android:layout_weight="1"/>
+
+        <travelapp.tamasya.view.customviews.button.ButtonAvenirBook
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="VERIFY NOW"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="4dp"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
     </LinearLayout>
 
@@ -25,10 +89,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:text="Start App"
+        android:text="START APP"
         android:textColor="@color/colorWhite"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:onClick="doRegistration"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:onClick="startApp"
         android:layout_gravity="bottom"/>
 
 

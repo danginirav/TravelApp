@@ -1,5 +1,6 @@
 package travelapp.tamasya.view.startup;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +11,7 @@ import android.view.View;
 
 import travelapp.tamasya.R;
 
-public class ResetPassword extends AppCompatActivity {
+public class ResetPasswordActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +24,13 @@ public class ResetPassword extends AppCompatActivity {
     public void setActionBar(){
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Reset Password");
         setSupportActionBar(toolbar);
 
         // Show the Up button in the action bar.
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setTitle(" ");
         }
     }
 
@@ -62,5 +63,8 @@ public class ResetPassword extends AppCompatActivity {
 
 
     public void resetPassword(View view) {
+//        Intent intent = new Intent(this, LoginActivity.class);
+//        startActivity(intent);
+        finish();
     }
 }

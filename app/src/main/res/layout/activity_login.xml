@@ -38,13 +38,14 @@
                         android:layout_height="120dp"
                         android:layout_centerInParent="true"
                         android:src="@drawable/app_icon"
-                        android:id="@+id/imgAppIcon"/>
+                        android:id="@+id/imgAppIcon"
+                        android:tint="@color/colorPrimary"/>
 
                     <travelapp.tamasya.view.customviews.textview.TextViewAvenirBook
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Tamsaya"
+                        android:text="@string/app_name"
                         android:textColor="@color/colorPrimary"
                         android:layout_centerInParent="true"
                         android:textSize="38sp"
@@ -57,8 +58,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     app:layout_collapseMode="pin"
-                    android:title="Tamsaya"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <travelapp.tamasya.view.customviews.textview.TextViewAvenirBook
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtTitle"
+                        android:text="Login"
+                        android:textColor="@color/colorWhite"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+                </android.support.v7.widget.Toolbar>
 
             </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -93,9 +103,9 @@
                         android:layout_height="wrap_content"
                         android:background="@color/colorPrimaryDark"
                         android:layout_marginRight="8dp"
-                        android:text="Google+"
+                        android:text="GOOGLE+"
                         android:textColor="@color/colorWhite"
-                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:layout_weight="1"/>
 
                     <travelapp.tamasya.view.customviews.button.ButtonAvenirBook
@@ -103,9 +113,9 @@
                         android:layout_height="wrap_content"
                         android:background="@color/colorPrimary"
                         android:layout_marginLeft="8dp"
-                        android:text="Facebook"
+                        android:text="FACEBOOK"
                         android:textColor="@color/colorWhite"
-                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:layout_weight="1"/>
 
                 </LinearLayout>
@@ -122,7 +132,7 @@
                         android:layout_height="match_parent"
                         android:hint="Email"
                         android:textColor="@color/colorPrimary"
-                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColorHint="@color/colorPrimaryLight"
                         android:inputType="textEmailAddress"/>
 
@@ -140,7 +150,7 @@
                         android:layout_height="match_parent"
                         android:hint="Password"
                         android:textColor="@color/colorPrimary"
-                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColorHint="@color/colorPrimaryLight"
                         android:inputType="textPassword"/>
 
@@ -149,10 +159,10 @@
                 <travelapp.tamasya.view.customviews.textview.TextViewAvenirBook
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Forgot password?"
+                    android:text="Forgot Password?"
                     android:gravity="center"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:layout_margin="16dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:padding="16dp"
                     android:id="@+id/txtForgotPassword"
                     android:textColor="@color/colorPrimary"/>
 
@@ -166,7 +176,7 @@
             android:background="@color/colorPrimaryDark"
             android:text="LOGIN"
             android:textColor="@color/colorWhite"
-            android:textAppearance="?android:textAppearanceMedium"
+            android:textAppearance="?android:textAppearanceSmall"
             android:onClick="doLogin"
             android:layout_gravity="bottom"/>
 

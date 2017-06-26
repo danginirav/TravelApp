@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorPrimaryDark"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="20dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/userImg"
+        android:src="@drawable/user_dummy"
+        app:riv_oval="true" />
+
+    <travelapp.tamasya.view.customviews.textview.TextViewAvenirBook
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Ali Hassan"
+        app:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+    <travelapp.tamasya.view.customviews.textview.TextViewAvenirBook
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="ali.hassan@gmail.com"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+    <travelapp.tamasya.view.customviews.textview.TextViewAvenirBook
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="+62248952314"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+</LinearLayout>

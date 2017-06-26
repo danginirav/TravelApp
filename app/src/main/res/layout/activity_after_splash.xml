@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/colorWhite"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="travelapp.tamasya.view.startup.AfterSplashActivity">
@@ -18,13 +19,14 @@
             android:layout_height="120dp"
             android:layout_centerInParent="true"
             android:src="@drawable/app_icon"
-            android:id="@+id/imgAppIcon"/>
+            android:id="@+id/imgAppIcon"
+            android:tint="@color/colorPrimary"/>
 
         <travelapp.tamasya.view.customviews.textview.TextViewAvenirBook
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Tamsaya"
+            android:text="@string/app_name"
             android:textColor="@color/colorPrimary"
             android:layout_centerInParent="true"
             android:textSize="38sp"
@@ -45,7 +47,7 @@
             android:layout_weight="1"
             android:text="LOGIN"
             android:textColor="@color/colorWhite"
-            android:textAppearance="?android:textAppearanceMedium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:onClick="doLogin"/>
 
         <travelapp.tamasya.view.customviews.button.ButtonAvenirBook
@@ -55,7 +57,7 @@
             android:layout_weight="1"
             android:text="REGISTER"
             android:textColor="@color/colorWhite"
-            android:textAppearance="?android:textAppearanceMedium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:onClick="doRegistration"/>
 
     </LinearLayout>

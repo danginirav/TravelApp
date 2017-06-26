@@ -1,5 +1,6 @@
 package travelapp.tamasya.view.startup;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.AppBarLayout;
@@ -11,6 +12,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import travelapp.tamasya.R;
 
@@ -52,12 +55,14 @@ public class RegistrationActivity extends AppCompatActivity {
                     scrollRange = appBarLayout.getTotalScrollRange();
                 }
                 if (scrollRange + verticalOffset == 0) {
-                    collapsingToolbarLayout.setTitle("Tamsaya");
+//                    collapsingToolbarLayout.setTitle("Login");
+                    ((TextView) findViewById(R.id.txtTitle)).setVisibility(View.VISIBLE);
                     upArrow.setColorFilter(getResources().getColor(R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
                     getSupportActionBar().setHomeAsUpIndicator(upArrow);
                     isShow = true;
                 } else if(isShow) {
-                    collapsingToolbarLayout.setTitle("");
+//                    collapsingToolbarLayout.setTitle("");
+                    ((TextView) findViewById(R.id.txtTitle)).setVisibility(View.GONE);
                     upArrow.setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_ATOP);
                     getSupportActionBar().setHomeAsUpIndicator(upArrow);
                     isShow = false;
@@ -93,5 +98,11 @@ public class RegistrationActivity extends AppCompatActivity {
         }
 
         return super.onKeyDown(keyCode, event);
+    }
+
+    public void doRegistration(View view) {
+        Intent intent = new Intent(RegistrationActivity.this, VerifyActivity.class);
+        startActivity(intent);
+//        finish();
     }
 }
